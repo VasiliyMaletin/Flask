@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    {{ title }}
+{% endblock %}
+
+{% block content %}
+    <div class="d-flex justify-content-between">
+        <h1>Добро пожаловать на сайт, {{ session["username"] }}!</h1>
+        <a class="btn btn-primary" href="/logout/" role="button">Выйти</a>
+    </div>
+    <img src="/static/image/shop.jpg" class="img-thumbnail" alt="shop">
+{% endblock %}
