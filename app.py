@@ -7,7 +7,7 @@ app.secret_key = secrets.token_hex()
 
 @app.route('/')
 def index():
-    if 'email' in session:
+    if 'login' and 'email' in session:
         return render_template('index.html')
     else:
         return redirect(url_for('login'))
